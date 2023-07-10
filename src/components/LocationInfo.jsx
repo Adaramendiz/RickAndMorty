@@ -1,16 +1,23 @@
-const LocationInfo = ({location}) => {
+const LocationInfo = ({ location }) => {
   return (
-    <article>
-      <h2>{location?.name}</h2>
-      <ul>
-        <li><span>Type: </span><span>{location?.type}</span></li>
-        <li><span>Dimension: </span><span>{location?.dimension}</span></li>
-        <li><span>Population: </span><span>{location?.residents.length}</span></li>
+    <article className="article__location">
+      <h2 className="article__title">{location?.name}</h2>
+      <ul className="article__ul">
+        <li className="article__li">
+          <span className="article__type">Type: </span>
+          <span >{location?.type}</span>
+        </li>
+        <li className="article__li">
+          <span className="article__dimension">Dimension: </span>
+          <span >{location?.dimension}</span>
+        </li>
+        <li className="article__li">
+          <span className="article__population" >Population: </span>
+          <span >{location?.residents?.length}</span>
+        </li>
       </ul>
     </article>
-  )
-}
+  );
+};
 
-export default LocationInfo
-
-
+export default LocationInfo;

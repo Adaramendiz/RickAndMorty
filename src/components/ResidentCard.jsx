@@ -4,14 +4,12 @@ import './styles/ResidentCard.css'
 
 const ResidentCard = ({ url }) => {
   const [character, setCharacter] = useState();
-
   useEffect(() => {
     axios
       .get(url)
       .then((resp) => setCharacter(resp.data))
       .catch((error) => console.log(error));
   }, []);
-
   return (
     <article className="resident">
       <header className="resident__header">
