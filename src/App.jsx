@@ -7,7 +7,6 @@ import './App.css'
 import ResidentCard from './components/ResidentCard'
 import FormLocation from './components/FormLocation'
 
-
 function App() {
   const [location, setLocation] = useState() 
   const [idLocation, setIdLocation] = useState(getRandomNumber(126))
@@ -31,7 +30,7 @@ function App() {
   },[idLocation])
   return (
     <div>
-      <img  src="https://i.imgur.com/XBGcfeo.png" alt=""></img>      
+      <img className='banner__img' src="https://i.imgur.com/XBGcfeo.png" alt=""></img>      
       <FormLocation 
         setIdLocation={setIdLocation}
         /> 
